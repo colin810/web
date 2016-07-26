@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^.*(\.css|\.js|\.gif|\.png|\.jpg|\.jpeg|\.apk)$
+
+RewriteRule ^(.*)$ index.php/$1 [L]

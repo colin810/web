@@ -1,0 +1,63 @@
+<?php
+
+//文字系统配置信息
+return array(
+    'account'         => array(
+        'john513'    => 'John Qu (SF537)',
+        'carter875'  => 'Carter Mok (SF542)',
+        'cody520'    => 'Cody Yip (SF566)',
+        'colin810'   => 'Colin Kuan (SF578)',
+        'marina319'  => 'Marina Ma (SF539)',
+        'chloe91'    => 'Chloe Leung (SF558)',
+        'dana71'     => 'Dana Hu (SF573)',
+        'mila23'     => 'Mila Lau (SF574)',
+        'fioni214'   => 'Fioni Fong (SF563)',
+        'sugi216'    => 'Sugi Chan (SF559)',
+        'adam330'    => 'Adam Hu (SF577)',
+        'barry321'   => 'Barry Cheung (SF576)',
+        'charco229'  => 'Charco Lee (SF575)',
+        'dicky865'   => 'Dicky Lai (SF544)',
+        'hannah166'  => 'Hannah Ng (SF578)',
+        'kelvin627'  => 'Kelvin Lau (SF579)',
+        'raymond620' => 'Raymond Wong (SF580)',
+        'goya96'     => 'Goya Yu (SF571)',
+        'lisa76'     => 'Lisa Lee (SF581)',
+    ),
+    'lang'            => array(
+        'zh-hans' => '简体(zh-hans)',
+        'zh-hant' => '繁体(zh-hant)',
+        'en'      => '英文(en)',
+        'ru'      => '俄文(ru)',
+        'jp'      => '日文(jp)',
+        'ko'      => '韓文(ko)',
+    ),
+    'system'          => array(
+        'aff'    => '推广员账号区',
+        'api'    => 'API接口',
+        'web'    => '官网',
+        'm'      => '手机官网',
+        'user'   => '用户帐号区',
+        'app'    => 'APP客户端',
+        'server' => '后台服务错误代码',
+    ),
+    'download_system' => array(
+        'aff'         => '推广员账号区',
+        'api'         => 'API接口',
+        'web'         => '官网',
+        'm'           => '手机官网',
+        'user'        => '用户帐号区',
+        'app_android' => 'Android客户端',
+        'app_ios'     => 'iOS客户端',
+        'server'      => '后台服务错误代码',
+    ),
+    'condition_type'  => array(
+        '1' => '全部',
+        '2' => '未完成',
+        '3' => '空值',
+    ),
+    'opt_flag'        => array(
+        '1' => '录入',
+        '2' => '更新',
+        '3' => '删除',
+    ),
+);
