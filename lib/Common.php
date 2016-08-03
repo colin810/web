@@ -134,7 +134,7 @@ class Common
         $pat   = "/<(\/?)(script|i?frame|style|html|body|li|i|map|title|img|link|span|u|font|table|tr|b|marquee|td|strong|div|a|meta|\?|\%)([^>]*?)>/isU";
         $input = preg_replace($pat, "", $input);
         $input = strip_tags($input);
-        $input = htmlspecialchars(stripslashes(trim($input)));
+        // $input = htmlspecialchars(stripslashes(trim($input)));
         return $input;
     }
 

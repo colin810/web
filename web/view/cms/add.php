@@ -14,7 +14,7 @@
                             <td>
                                 <select class="form-control" name="edit_system" id="edit_system">
                                     <option value="">请选择系统</option>
-                                    <?php foreach ($this->cms_config['system'] as $key => $value) { ?>
+                                    <?php foreach ($this->cms_system as $key => $value) { ?>
                                     <option value="<?php echo $key ?>">
                                         <?php echo $value ?>
                                     </option>
@@ -28,7 +28,7 @@
                                 <input type="text" name="edit_key" id="edit_key" class="form-control" />
                             </td>
                         </tr>
-                        <?php foreach ($this->cms_config['lang'] as $key => $value) { ?>
+                        <?php foreach ($this->cms_lang as $key => $value) { ?>
                         <tr>
                             <td><label><?php echo $value ?>：</label></td>
                             <td>

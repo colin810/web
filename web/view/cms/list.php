@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <select class="form-control change_system" name="search_system">
-                            <?php foreach ($this->cms_config['system'] as $key => $value) {
+                            <?php foreach ($this->cms_system as $key => $value) {
                                 $selected = $this->search_arr['search_system'] == $key ? 'selected' : ''; ?>
                             <option value="<?php echo $key ?>"  <?php echo $selected; ?>><?php echo $value ?></option>
                             <?php }?>
@@ -28,11 +28,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="checkbox" style="text-align:right;">
-                            <?php foreach ($this->cms_config['lang'] as $key => $value) {
+                            <?php foreach ($this->cms_lang as $key => $value) {
                                 $checked = in_array($key, $this->search_arr['search_lang']) ? 'checked' : '';?>
                             <label>
                                 <input class="change_lang" type="checkbox" name="search_lang[]" value="<?php echo $key; ?>" <?php echo $checked; ?> />
-                                <?php echo $value; ?>
+                                <?php echo $value . "({$key})"; ?>
                             </label> &nbsp;
                             <?php }?>
                         </div>
@@ -75,7 +75,7 @@
                         for ($i = 0; $i < $size_of_lang; $i++) {
                     ?>
                     <th width="<?php echo $width; ?>">
-                        <?php echo $this->cms_config['lang'][$this->search_arr['search_lang'][$i]]; ?>
+                        <?php echo $this->cms_lang[$this->search_arr['search_lang'][$i]]; ?>
                     </th>
                     <?php }?>
                     <th>

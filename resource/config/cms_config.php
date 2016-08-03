@@ -2,7 +2,7 @@
 
 //文字系统配置信息
 return array(
-    'account'         => array(
+    'account'        => array(
         'john513'    => 'John Qu (SF537)',
         'carter875'  => 'Carter Mok (SF542)',
         'cody520'    => 'Cody Yip (SF566)',
@@ -23,41 +23,25 @@ return array(
         'goya96'     => 'Goya Yu (SF571)',
         'lisa76'     => 'Lisa Lee (SF581)',
     ),
-    'lang'            => array(
-        'zh-hans' => '简体(zh-hans)',
-        'zh-hant' => '繁体(zh-hant)',
-        'en'      => '英文(en)',
-        'ru'      => '俄文(ru)',
-        'jp'      => '日文(jp)',
-        'ko'      => '韓文(ko)',
-    ),
-    'system'          => array(
-        'aff'    => '推广员账号区',
-        'api'    => 'API接口',
-        'web'    => '官网',
-        'm'      => '手机官网',
-        'user'   => '用户帐号区',
-        'app'    => 'APP客户端',
-        'server' => '后台服务错误代码',
-    ),
-    'download_system' => array(
-        'aff'         => '推广员账号区',
-        'api'         => 'API接口',
-        'web'         => '官网',
-        'm'           => '手机官网',
-        'user'        => '用户帐号区',
-        'app_android' => 'Android客户端',
-        'app_ios'     => 'iOS客户端',
-        'server'      => '后台服务错误代码',
-    ),
-    'condition_type'  => array(
+    'condition_type' => array(
         '1' => '全部',
         '2' => '未完成',
         '3' => '空值',
     ),
-    'opt_flag'        => array(
+    'opt_flag'       => array(
         '1' => '录入',
         '2' => '更新',
         '3' => '删除',
+    ),
+    'download_ext'   => array(
+        '1' => 'PHP',
+        '2' => 'Android',
+        '3' => 'iOS',
+        '4' => 'Excel',
+    ),
+    'import_ext'     => array(
+        '1' => 'PHP',
+        '2' => 'Android',
+        '3' => 'Excel',
     ),
 );

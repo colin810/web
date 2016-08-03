@@ -8,11 +8,11 @@
 	  	<table class="table">
 	  		<tr>
 	  			<td width="100">所属系统：</td>
-				<td><?php echo $this->cms_config['system'][$this->model['system']] ?></td>
+				<td><?php echo $this->cms_system[$this->model['system']] ?></td>
 	  		</tr>
 			<tr>
 	  			<td>翻译语言：</td>
-				<td><?php echo $this->cms_config['lang'][$this->model['lang']] ?></td>
+				<td><?php echo $this->cms_lang[$this->model['lang']] ?></td>
 	  		</tr>
 	  		<tr>
 	  			<td>修改人：</td>
