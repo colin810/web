@@ -26,14 +26,15 @@ class Mcms_value
      */
     public static function insert($key_id, $lang, $content, $version = 0)
     {
-        $content               = str_replace("\'", "'", $content);
-        $content               = str_replace('\"', '"', $content);
-        $db                    = DBHelper::getInstance();
-        $data                  = array();
-        $data['value_id']      = Common::guid();
-        $data['key_id']        = $key_id;
-        $data['lang']          = $lang;
-        $data['content']       = Common::removewrap($content);
+        $content          = str_replace("\'", "'", $content);
+        $content          = str_replace('\"', '"', $content);
+        $db               = DBHelper::getInstance();
+        $data             = array();
+        $data['value_id'] = Common::guid();
+        $data['key_id']   = $key_id;
+        $data['lang']     = $lang;
+        // $data['content']       = Common::removewrap($content);
+        $data['content']       = $content;
         $data['content_clean'] = Common::removeXSS($content);
         $data['remark']        = '';
         $data['version']       = $version;
@@ -63,11 +64,12 @@ class Mcms_value
      */
     public static function update($value_id, $content, $version, $remark = '')
     {
-        $content               = str_replace("\'", "'", $content);
-        $content               = str_replace('\"', '"', $content);
-        $db                    = DBHelper::getInstance();
-        $data                  = array();
-        $data['content']       = Common::removewrap($content);
+        $content = str_replace("\'", "'", $content);
+        $content = str_replace('\"', '"', $content);
+        $db      = DBHelper::getInstance();
+        $data    = array();
+        // $data['content']       = Common::removewrap($content);
+        $data['content']       = $content;
         $data['content_clean'] = Common::removeXSS($content);
         $data['remark']        = $remark;
         $data['version']       = $version;

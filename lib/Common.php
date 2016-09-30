@@ -156,6 +156,20 @@ class Common
     }
 
     /**
+     * [hasEnter description]
+     * @param  [type]  $input [description]
+     * @return boolean        [description]
+     */
+    public static function hasEnter($input)
+    {
+        if (strpos($input, chr(10)) === false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
      * [getReqestParams description]
      * @param  array   $params      [description]
      * @param  string  $patten      [description]

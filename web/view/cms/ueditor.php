@@ -1,5 +1,5 @@
-<?php $this->render('/cms/_include/header'); ?>
-<?php $this->render('/cms/_include/top'); ?>
+<?php $this->render('/cms/_include/header');?>
+<?php $this->render('/cms/_include/top');?>
 
 <script type="text/javascript" charset="utf-8" src="/ext/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ext/ueditor/ueditor.all.min.js"> </script>
@@ -9,7 +9,7 @@
 <form id="xform" method="post" action="<?php echo $this->createUrl('save'); ?>">
 <div class="container">
     <h1><?php echo $this->model['key_code'] ?></h1>
-	<script id="editor" type="text/plain" style="width:100%;height:450px;"></script>
+    <script id="editor" type="text/plain" style="width:100%;height:450px;"></script>
     <div class="checkbox">
         <label>
           <input type="checkbox" name="edit_version"> 更新版本
@@ -25,13 +25,12 @@
 </div>
 </form>
 <script type="text/javascript">
-
-    //实例化编辑器
-    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-    //var ue = UE.getEditor('editor');
     $(function(){
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        //var ue = UE.getEditor('editor');
         var ue = UE.getEditor('editor', {
-        	toolbars: [[
+            toolbars: [[
                 'fullscreen', 'source', '|', 'undo', 'redo', '|',
                 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
                 'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
@@ -45,14 +44,12 @@
             ]],
             textarea : 'edit_content',
             autoHeightEnabled: true,
-            autoFloatEnabled: true
+            autoFloatEnabled: true,
+            allowDivTransToP: false
         });
         ue.ready(function() {
             ue.setContent('<?php echo $this->model['content'] ?>');
         });
-        // UE.getEditor('editor')
-        // var remark = $("#remark").val().replace(new RegExp(/\r/g),'').replace(new RegExp(/\n/g),'<br/>');
-
         submitForm({
             submitBtn: '#save',
             success: function(data){
@@ -66,4 +63,4 @@
     });
 </script>
 
-<?php $this->render('/cms/_include/footer') ?>
+<?php $this->render('/cms/_include/footer')?>

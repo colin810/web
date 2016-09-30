@@ -159,7 +159,12 @@ class CmsController extends Controller
         $key_id = trim($_GET['ajax_key_id']);
         $lang   = trim($_GET['ajax_lang']);
         $model  = Mcms_value::getKeyAndValue($key_id, $lang);
-        $this->render->display('ueditor', array('model' => $model));
+        if (Common::hasEnter($model['content'])) {
+            $template = 'textarea';
+        } else {
+            $template = 'editor';
+        }
+        $this->render->display($template, array('model' => $model));
     }
 
     /**
@@ -410,5 +415,19 @@ class CmsController extends Controller
         $db_config = ConfigLoader::load('db_config');
         system("@" . WEB_ROOT . "\\bak\\backup.bat");
         Common::echoMsg(true, "备份成功！");
+    }
+
+    /**
+     * [uploadAction description]
+     * @return [type] [description]
+     */
+    public function uploadAction()
+    {
+        $uploader = new FileUpload();
+        if (!$uploader->upload('file')) {
+            Common::echoMsg(false, array('file' => $uploader->getErrorMsg()));
+        }
+        $file_path = '/uploads/' . $uploader->getFileName();
+        exit($file_path);
     }
 }

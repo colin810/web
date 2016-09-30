@@ -22,6 +22,7 @@ return array(
         'raymond620' => 'Raymond Wong (SF580)',
         'goya96'     => 'Goya Yu (SF571)',
         'lisa76'     => 'Lisa Lee (SF581)',
+        'grace815'   => 'Grace Kam (SF582)',
     ),
     'condition_type' => array(
         '1' => '全部',
