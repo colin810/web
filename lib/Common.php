@@ -177,7 +177,7 @@ class Common
      * @param  boolean $removeXSS   [description]
      * @return [type]               [description]
      */
-    public static function getReqestParams($params = array(), $patten = 'default', $source_data = null, $removeXSS = true)
+    public static function getReqestParams($params = array(), $patten = 'default', $removeXSS = false, $source_data = null)
     {
         if (!isset($source_data)) {
             $source_data = $_REQUEST;

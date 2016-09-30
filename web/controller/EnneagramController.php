@@ -15,7 +15,7 @@ class EnneagramController extends Controller
     {
         if ($_POST) {
             $params     = array('username', 'telephone');
-            $params     = Common::getReqestParams($params, 'enneagram');
+            $params     = Common::getReqestParams($params, 'enneagram', true);
             $session_id = Menneagram_group::insert($params['username'], $params['telephone']);
 
             if ($session_id === false) {
@@ -69,7 +69,7 @@ class EnneagramController extends Controller
     {
         if ($_POST) {
             $params    = array('session_id');
-            $params    = Common::getReqestParams($params, 'enneagram');
+            $params    = Common::getReqestParams($params, 'enneagram', true);
             $enneagram = Menneagram::getAll();
             $list      = Menneagram_row::getDetailList($params['session_id']);
             $html      = '';

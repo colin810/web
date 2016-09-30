@@ -16,7 +16,7 @@ class welcomeController extends Controller
     {
         if ($_POST) {
             $params = array('username', 'password');
-            $params = Common::getReqestParams($params, 'admin');
+            $params = Common::getReqestParams($params, 'admin', true);
 
             $admin = Madmin_user::login($params['username'], $params['password']);
             if ($admin === false) {
